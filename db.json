@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "posts": 
     {
       "order": 1,
       "section": "highlight_card"
@@ -16,7 +16,7 @@
       "ordeer": 4,
       "section": "links_section"
     }
-  ],
+  ,
   "profile": {
     "name": "typicode"
   }
