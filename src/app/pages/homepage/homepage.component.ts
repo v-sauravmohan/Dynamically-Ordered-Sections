@@ -19,13 +19,7 @@ export class HomepageComponent implements OnInit, AfterViewInit {
     'next_steps_section',
     'links_section'];
 
-  private url = 'http://my-json-server.typicode.com/v-sauravmohan/Crypto-Ticker/posts/';
-  private data;
-
-  // orderFromAPI = ['resources_section',
-  // 'next_steps_section',
-  // 'links_section',
-  // 'highlight_card'];
+  private url = '../data/section-order-data.json';
 
   @ViewChild('sectionsContainer', { read: ViewContainerRef, static: true })
   sectionsContainer: ViewContainerRef;
@@ -39,13 +33,11 @@ export class HomepageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.sectionBuilder.buildSections(this.sectionsContainer, this.getSectionOrderMap());
-    console.log(this.data);
   }
 
   private fetchSectionOrder() {
-    this.http.get<any>(this.url).subscribe(data => {
-      this.data = data;
-    });
+    const data = this.http.get(this.url);
+    console.log(data);
   }
 
   private getSectionOrderMap() {

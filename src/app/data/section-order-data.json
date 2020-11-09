@@ -1,0 +1,18 @@
+[
+  {
+    "order": 1,
+    "section": "highlight_card"
+  },
+  {
+    "order": 2,
+    "section": "resources_section"
+  },
+  {
+    "order": 3,
+    "section": "next_steps_section"
+  },
+  {
+    "ordeer": 4,
+    "section": "links_section"
+  }
+]
